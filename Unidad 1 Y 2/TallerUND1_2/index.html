@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Colombia</title>
+    <link rel="stylesheet" href="sass/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Anime Colombia</h1>
+        <button class="tablink" onclick="openPage('Inicio', this, 'red' )" >Inicio</button>
+        <button class="tablink" onclick="openPage('contacto', this, 'blue')">Contacto</button>
+        <button class="tablink" onclick="openPage('acerca', this, 'orange')">Acerca de</button>
+
+        <div id="Inicio" class="tabcontent">
+            <h3>Inicio</h3>
+            <p>Bienvenido a esta pagina</p>
+        </div>
+
+        <div id="contacto" class="tabcontent">
+            <h3>Contacto</h3>
+            <p>Ponte en contacto.</p>
+        </div>
+
+        <div id="acerca" class="tabcontent">
+            <h3>Acerca de</h3>
+            <p>Que hacemos</p>
+        </div>
+    </header>
+    <!-- Tab links -->
+
+    <main>
+        <div class="box">
+            <a href="contenido.html">Ver mas</a>
+        </div>
+
+        <div>
+            <a href="comentarios.html">Comentario</a>
+        </div>
+
+    </main>
+    <footer>
+        <p>Derechos reservados Andres Herrera</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
