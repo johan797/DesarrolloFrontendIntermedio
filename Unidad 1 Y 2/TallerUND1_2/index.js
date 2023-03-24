@@ -8,14 +8,14 @@
     })*/
 
     function imprimirComentario(){
-        let nombreUsuario =document.getElementById("nombre-input");
-        let fecha =document.getElementById("fecha-input");
-        let comentario =document.getElementById("comentario-input");
-
-        nombreUsuario.innerHTML=a;
-        fecha.innerHTML=b;
-        comentario.innerHTML=c;
-    }
+        let nombreUsuario = document.getElementById("nombre-input").value;
+        let fecha = document.getElementById("fecha-input").value;
+        let comentario = document.getElementById("comentario-input").value;
+      
+        document.getElementById("nombre").innerHTML = nombreUsuario;
+        document.getElementById("fecha").innerHTML = fecha;
+        document.getElementById("texto").innerHTML = comentario;
+      }
 
 
     const options = {
