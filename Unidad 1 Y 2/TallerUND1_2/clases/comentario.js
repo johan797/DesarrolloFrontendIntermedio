@@ -50,18 +50,7 @@ class comentario {
         // Agrega el comentarioDiv al contenedor de comentarios
         document.getElementById("comentarios").appendChild(comentarioDiv);
     }
-    ocultarMostrarElemento() {
-        let elemento1 = document.getElementById("editar");
-        let elemento2 = document.getElementById("borrar");
 
-        if (elemento1.style.display == "none" & elemento2.style.display == "none") {
-            elemento1.style.display = "block";
-            elemento2.style.display = "block";
-        } else {
-            elemento1.style.display = "none";
-            elemento2.style.display = "none";
-        }
-    }
     editarComentario(usuario, fecha, texto) {
         this.usuario = usuario;
         this.fecha = fecha;
