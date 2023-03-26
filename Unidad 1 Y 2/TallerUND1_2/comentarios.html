@@ -8,6 +8,8 @@
 </head>
 <body>
     <h1>comentarios</h1>
+    <script src="index.js"></script>
+
     <form id="comentario-form">
         <label for="nombre-input">Nombre:</label>
         <input type="text" id="nombre-input" required>
@@ -18,13 +20,14 @@
         <label for="comentario-input">Comentario:</label>
         <textarea id="comentario-input" required></textarea>
         
-        <button type="submit" onclick="imprimirComentario()">Agregar Comentario</button>
+        <button type="submit">Agregar Comentario</button>
+        <p id="nombre"></p>
+        <p id="fecha"></p>
+        <p id="texto"></p>  
       </form>
-      <p id="nombre"></p>
-      <p id="fecha"></p>
-      <p id="texto"></p>
-
-
-      <script src="index.js"></script>
+   
 </body>
+
+<script src="index.js"></script>
+
 </html>
