@@ -1,14 +1,29 @@
 class comentario {
     constructor(nombre, fecha, comentarios) {
         //validacion de argumentos
-        this.nombre = nombre;
+        this. usuario = nombre;
         this.fecha = fecha;
-        this.comentarios = comentarios;
+        this.texto = comentarios;
     }
     //metodos de clase
-    imprimirComentario() {
-        document.getElementById("nombre").innerHTML = this.nombre;
+    agregarComentario() {
+        document.getElementById("nombre").innerHTML = this.usuario;
         document.getElementById("fecha").innerHTML = this.fecha;
-        document.getElementById("texto").innerHTML = this.comentarios;
+        document.getElementById("texto").innerHTML = this.texto;
+      }
+    
+      editarComentario(usuario, fecha, texto) {
+        this.usuario = usuario;
+        this.fecha = fecha;
+        this.texto = texto;
+        this.agregarComentario();
+      }
+    
+      eliminarComentario() {
+        this.usuario = "";
+        this.fecha = "";
+        this.texto = "";
+        this.agregarComentario();
+      }
     }
-}
+

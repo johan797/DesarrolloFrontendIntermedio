@@ -1,7 +1,4 @@
-let names = document.getElementById("nombre-input").value;
-let date = document.getElementById("fecha-input").value;
-let comments = document.getElementById("comentario-input").value;
-let comentario1 = new comentario(names,date,comments);
+
 
 
 // Agregar controlador de eventos al formulario
@@ -9,8 +6,11 @@ document.getElementById("comentario-form").addEventListener("submit", function (
     // Evitar que la página se recargue al enviar el formulario
     event.preventDefault();
     // Llamar a la función imprimirComentario()
-    comentario1.imprimirComentario();
-   
+    let names = document.getElementById("nombre-input").value;
+    let date = document.getElementById("fecha-input").value;
+    let comments = document.getElementById("comentario-input").value;
+    let comentario1 = new comentario(names,date,comments);
+    comentario1.agregarComentario();   
 });
 /*
 function imprimirComentario() {
