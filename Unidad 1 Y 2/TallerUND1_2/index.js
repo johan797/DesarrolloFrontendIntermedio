@@ -1,30 +1,28 @@
-/*fetch("https://kitsu.io/api/edge")
-    .then(res=>console.log(res))*/
-
-    /*fetch("https://pokeapi.co/api/v2/pokemon/ditto")
-    .then(res=>res.json())
-    .then(response=>{
-        console.log(response)
-    })*/
+let names = document.getElementById("nombre-input").value;
+let date = document.getElementById("fecha-input").value;
+let comments = document.getElementById("comentario-input").value;
+let comentario1 = new comentario(names,date,comments);
 
 
-       // Agregar controlador de eventos al formulario
-      document.getElementById("comentario-form").addEventListener("submit", function(event) {
-        // Evitar que la página se recargue al enviar el formulario
-        event.preventDefault();
-        // Llamar a la función imprimirComentario()
-        imprimirComentario();
-      });
+// Agregar controlador de eventos al formulario
+document.getElementById("comentario-form").addEventListener("submit", function (event) {
+    // Evitar que la página se recargue al enviar el formulario
+    event.preventDefault();
+    // Llamar a la función imprimirComentario()
+    comentario1.imprimirComentario();
+   
+});
+/*
+function imprimirComentario() {
+    let nombreUsuario = document.getElementById("nombre-input").value;
+    let fecha = document.getElementById("fecha-input").value;
+    let comentario = document.getElementById("comentario-input").value;
 
-      function imprimirComentario(){
-        let nombreUsuario = document.getElementById("nombre-input").value;
-        let fecha = document.getElementById("fecha-input").value;
-        let comentario = document.getElementById("comentario-input").value;
-      
-        document.getElementById("nombre").innerHTML = nombreUsuario;
-        document.getElementById("fecha").innerHTML = fecha;
-        document.getElementById("texto").innerHTML = comentario;
-      }
+    document.getElementById("nombre").innerHTML = nombreUsuario;
+    document.getElementById("fecha").innerHTML = fecha;
+    document.getElementById("texto").innerHTML = comentario;
+}
+*/
 /*
 
 
