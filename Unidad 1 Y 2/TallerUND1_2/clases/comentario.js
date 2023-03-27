@@ -1,32 +1,19 @@
 class comentario {
-    
-    constructor(id,nombre, fecha, comentarios) {
+
+    constructor(id, nombre, fecha, comentarios) {
         //validacion de argumentos
         this.id = id;
         this.usuario = nombre;
         this.fecha = fecha;
         this.texto = comentarios;
-
     }
-
-    borrarComentario(id) {
-        // Busca el comentario correspondiente al id
-        let comentarioDiv = document.querySelector(`.comentario[id='${id}']`);
-        if (!comentarioDiv) {
-          console.error(`Comentario no encontrado para id ${id}`);
-          return;
-        }
-        // Elimina el comentario
-        comentarioDiv.remove();
-        console.log(`Comentario ${id} eliminado`);
-        }
     //metodos de clase
     agregarComentario() {
 
         // Crea un nuevo elemento div para el comentario
         let comentarioDiv = document.createElement("div");
         comentarioDiv.classList.add("comentario");
-        comentarioDiv.id='com'+this.id;
+        comentarioDiv.id = 'com' + this.id;
         // Crea nuevos elementos HTML para mostrar el nombre, fecha y comentario
         let nombreElement = document.createElement("span");
         nombreElement.classList.add("nombre");
@@ -41,16 +28,17 @@ class comentario {
         textoElement.textContent = this.texto;
 
         // Crea nuevos botones para editar y borrar el comentario
-        let editarElement = document.createElement("button");        
-        editarElement.classList.add("editar");                 
+        let editarElement = document.createElement("button");
+        editarElement.classList.add("editar");
         editarElement.innerHTML = 'Editar';
+        editarElement.id = 'm'+this.id;
 
-        let borrarElement = document.createElement("button");        
-        borrarElement.classList.add("borrar");               
+        let borrarElement = document.createElement("button");
+        borrarElement.classList.add("borrar");
         borrarElement.innerHTML = 'Borrar';
-        borrarElement.id=this.id;
-        
-        
+        borrarElement.id = this.id;
+
+
         // Agrega los nuevos elementos al comentarioDiv
         comentarioDiv.appendChild(nombreElement);
         comentarioDiv.appendChild(fechaElement);
@@ -62,16 +50,34 @@ class comentario {
 
     }
 
-    
-/*
+    editarComentario(id) {
+        // Busca el comentario correspondiente al id
+        let comentarioDiv = document.querySelector(`.comentario[id='${id}']`);
+        if (!comentarioDiv) {
+          console.error(`Comentario no encontrado para id ${id}`);
+          return;
+        }
+        // Pide al usuario que ingrese el nuevo texto del comentario
+        let nuevoTexto = prompt("Ingrese el nuevo texto del comentario:");
+        if (!nuevoTexto) {
+          console.error("Texto de comentario vacío o cancelado");
+          return;
+        }
+        // Actualiza el texto del comentario
+        comentarioDiv.querySelector(".texto").textContent = nuevoTexto;
+        console.log(`Comentario ${id} editado`);
+      }
+
     borrarComentario(id) {
         // Busca el comentario correspondiente al id
-    let comentarioDiv = document.getElementById(`com${id}`);
-    if (!comentarioDiv) {
-        console.error(`No se encontró el comentario con id ${id}`);
-        return;
+        let comentarioDiv = document.querySelector(`.comentario[id='${id}']`);
+        if (!comentarioDiv) {
+            console.error(`Comentario no encontrado para id ${id}`);
+            return;
+        }
+        // Elimina el comentario
+        comentarioDiv.remove();
+        console.log(`Comentario ${id} eliminado`);
     }
-    comentarioDiv.remove();
-    console.log(`Comentario con id ${id} eliminado.`);
-    }*/
+
 }
