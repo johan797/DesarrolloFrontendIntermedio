@@ -7,7 +7,7 @@ const options = {
 };
 
 //fetch('https://moviesdatabase.p.rapidapi.com/titles/x/titles-by-ids?idsList=tt0001702%2Ctt0001856%2Ctt0001856', options)
-fetch('https://moviesdatabase.p.rapidapi.com/titles/x/titles-by-ids?idsList=tt0101702%2Ctt0101856%2Ctt0101857%2Ctt0101703%2Ctt0101858%2Ctt0001859%2Ctt0001704%2Ctt0001861%2Ctt0001862%2Ctt0001706%2Ctt0001863%2Ctt0001864%2Ctt0001706%2Ctt0001866%2Ctt0001870', options)
+fetch('https://moviesdatabase.p.rapidapi.com/titles/x/titles-by-ids?idsList=tt0072308%2Ctt0101856%2Ctt0101857%2Ctt0101703%2Ctt0101858%2Ctt0468569%2Ctt0401704%2Ctt0501861%2Ctt0601862%2Ctt0701706%2Ctt0801863%2Ctt0901864%2Ctt0801706%2Ctt0401866%2Ctt0113277', options)
  
 // Convertir la respuesta de la solicitud a un objeto JSON
     .then(response => response.json())
@@ -39,8 +39,8 @@ fetch('https://moviesdatabase.p.rapidapi.com/titles/x/titles-by-ids?idsList=tt01
                 const image = document.createElement("img");
                 image.src = result.primaryImage.url;
                 image.alt = result.titleText.text;
-                image.style.width = "400px"; // establecer ancho de imagen a 100px
-                image.style.height = "400px";
+                image.style.width = "200px"; // establecer ancho de imagen a 100px
+                image.style.height = "300px";
                 imageCell.appendChild(image);
             }
 
@@ -58,3 +58,4 @@ fetch('https://moviesdatabase.p.rapidapi.com/titles/x/titles-by-ids?idsList=tt01
         });
     })
     .catch(err => console.error(err));
+
