@@ -52,3 +52,17 @@ fetch('https://moviesdatabase.p.rapidapi.com/titles/x/titles-by-ids?idsList=tt00
     })
     .catch(err => console.error(err));
 
+<table id="grid">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Image</th>
+				<th>Type</th>
+				<th>Title</th>
+				<th>Year</th>
+				<th>Date</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>

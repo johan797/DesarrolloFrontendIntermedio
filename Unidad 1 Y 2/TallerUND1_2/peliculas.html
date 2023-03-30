@@ -2,17 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PELICULAS</title>
-    <style>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PELICULAS</title>
+	<style>
 		table {
 			border-collapse: collapse;
 			width: 100%;
 		}
 
-		th, td {
+		th,
+		td {
 			text-align: left;
 			padding: 8px;
 			border-bottom: 1px solid #ddd;
@@ -21,29 +22,30 @@
 		th {
 			background-color: #f2f2f2;
 		}
+
+		a {
+			margin: 100px 10px;
+		}
+		img{
+			margin: 50px 10px;
+		}
+		p{
+			display:block;
+		}
+		.flex-container {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
 	</style>
 </head>
 
 <body>
-    <a href="index.html">
-        <h1>Movies Colombia</h1>
-    </a>
-    <h1>PELICULAS</h1>
-    <div id="generos"></div>
-    <table id="grid">
-		<thead>
-			<tr>
-				<th>ID</th>
-				<th>Image</th>
-				<th>Type</th>
-				<th>Title</th>
-				<th>Year</th>
-				<th>Date</th>
-			</tr>
-		</thead>
-		<tbody>
-		</tbody>
-	</table>
+	<a href="index.html"><h1>Movies Colombia</h1></a>
+	<h1>PELICULAS</h1>
+	<div class="flex-container" id="generos"></div>
+	<div class="flex-container peliculas" id="peliculas"></div>
+
 </body>
 <script src="fetch.js"></script>
 

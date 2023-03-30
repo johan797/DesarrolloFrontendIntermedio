@@ -34,8 +34,26 @@ listaGeneros.addEventListener("click", function(event) {
 });
 
 function MostrarGeneros(genero) {
-    fetch(`https://moviesdatabase.p.rapidapi.com/titles?genre=${genero}&list=most_pop_movies&limit=15&year=2020&page=2`, options)
+    fetch(`https://moviesdatabase.p.rapidapi.com/titles?genre=${genero}&list=most_pop_movies&limit=16&page=2`, options)
     .then(response => response.json())
-    .then(response => console.log(response))
+    .then(response => {
+        const data = response;
+        data.results.forEach(result => {
+            const divP = document.getElementById('peliculas');
+            if (result.primaryImage && result.primaryImage.url) {
+                const image = document.createElement("img");
+                image.src = result.primaryImage.url;
+                image.alt = result.titleText.text;
+                image.style.width = "200px"; // establecer ancho de imagen a 100px
+                image.style.height = "300px";
+                divP.appendChild(image);
+                const anio = document.createElement("p");
+                anio.innerHTML=result.releaseYear.year;
+                divP.appendChild(anio);
+            }    
+        })
+    })
     .catch(err => console.error(err));
+    
+
 }
