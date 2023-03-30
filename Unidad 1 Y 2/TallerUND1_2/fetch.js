@@ -25,15 +25,17 @@ function generos() {
         .catch(err => console.error(err));
 }
 generos();
-let genero;
+
 const listaGeneros = document.getElementById('generos');
 listaGeneros.addEventListener("click", function(event) {    
-    genero = event.target.innerText;    
+    let genero = event.target.innerText;    
     console.log(typeof(genero));
+    MostrarGeneros(genero);
 });
 
-
-fetch('https://moviesdatabase.p.rapidapi.com/titles?genre=${genero}&list=most_pop_movies&limit=15&year=2020&page=2', options)
+function MostrarGeneros(genero) {
+    fetch(`https://moviesdatabase.p.rapidapi.com/titles?genre=${genero}&list=most_pop_movies&limit=15&year=2020&page=2`, options)
     .then(response => response.json())
     .then(response => console.log(response))
     .catch(err => console.error(err));
+}
