@@ -5,57 +5,35 @@ const options = {
         'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
     }
 };
+function generos() {
 
-//fetch('https://moviesdatabase.p.rapidapi.com/titles/x/titles-by-ids?idsList=tt0001702%2Ctt0001856%2Ctt0001856', options)
-fetch('https://moviesdatabase.p.rapidapi.com/titles/x/titles-by-ids?idsList=tt0072308%2Ctt0101856%2Ctt0101857%2Ctt0101703%2Ctt0101858%2Ctt0468569%2Ctt0401704%2Ctt0501861%2Ctt0601862%2Ctt0701706%2Ctt0801863%2Ctt0901864%2Ctt0801706%2Ctt0401866%2Ctt0113277', options)
- 
-// Convertir la respuesta de la solicitud a un objeto JSON
-    .then(response => response.json())
-    .then(response => {
-        /*// Obtener el elemento donde se mostrará la respuesta
-        const respuestaElement = document.getElementById('respuesta-fetch');
-        // Asignar el valor de la respuesta al elemento
-        respuestaElement.innerHTML = JSON.stringify(response, null, 3);*/
-
-        // Obtener los datos de la respuesta y asignarlos a una variable llamada "data"
-        const data = response;
-        // Obtener la tabla y la sección de cuerpo de la tabla
-        const table = document.getElementById("grid");
-        const tbody = table.querySelector("tbody");
-
-        /*el método forEach() para iterar sobre los 
-        resultados del JSON y agregar cada fila correspondiente a la tabla. 
-        Para cada resultado, se crean las celdas correspondientes en la fila y
-         se asignan los valores*/
-        data.results.forEach(result => {
-            // Crear una nueva fila en la sección de cuerpo de la tabla
-            const row = tbody.insertRow();
-            // Agregar una celda para el ID del resultado
-            const idCell = row.insertCell();
-            idCell.textContent = result.id;
-
-            const imageCell = row.insertCell();
-            if (result.primaryImage && result.primaryImage.url) {
-                const image = document.createElement("img");
-                image.src = result.primaryImage.url;
-                image.alt = result.titleText.text;
-                image.style.width = "200px"; // establecer ancho de imagen a 100px
-                image.style.height = "300px";
-                imageCell.appendChild(image);
+    fetch('https://moviesdatabase.p.rapidapi.com/titles/utils/genres', options)
+        .then(response => response.json())
+        .then(response => {
+            let generos = response.results;
+            //console.log(typeof(generos));
+            const div = document.getElementById('generos');
+            const ul = document.createElement('ul');
+            for (let i = 1; i < generos.length; i++) {
+                const a = document.createElement('a');                
+                a.href = '#'; // Agrega un enlace "#" por defecto
+                a.innerText = generos[i];
+                ul.appendChild(a);
             }
+            div.appendChild(ul);
+        })
+        .catch(err => console.error(err));
+}
+generos();
+let genero;
+const listaGeneros = document.getElementById('generos');
+listaGeneros.addEventListener("click", function(event) {    
+    genero = event.target.innerText;    
+    console.log(typeof(genero));
+});
 
-            const typeCell = row.insertCell();
-            typeCell.textContent = result.titleType.text;
 
-            const titleCell = row.insertCell();
-            titleCell.textContent = result.titleText.text;
-
-            const yearCell = row.insertCell();
-            yearCell.textContent = result.releaseYear.year;
-
-            const dateCell = row.insertCell();
-            dateCell.textContent = `${result.releaseDate.day}/${result.releaseDate.month}/${result.releaseDate.year}`;
-        });
-    })
+fetch('https://moviesdatabase.p.rapidapi.com/titles?genre=${genero}&list=most_pop_movies&limit=15&year=2020&page=2', options)
+    .then(response => response.json())
+    .then(response => console.log(response))
     .catch(err => console.error(err));
-
