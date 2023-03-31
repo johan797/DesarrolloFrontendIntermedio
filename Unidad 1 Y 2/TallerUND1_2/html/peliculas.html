@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PELICULAS</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		th,
+		td {
+			text-align: left;
+			padding: 8px;
+			border-bottom: 1px solid #ddd;
+		}
+
+		th {
+			background-color: #f2f2f2;
+		}
+
+		a {
+			margin: 100px 10px;
+		}
+
+		img {
+			margin: 50px 10px;
+		}
+
+		p {
+			display: block;
+		}
+
+		.flex-container {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+	</style>
+</head>
+
+<body>
+	<a href="index.html">
+		<h1>Movies Colombia</h1>
+	</a>
+	<h1>PELICULAS</h1>
+	<div class="seleccionar">
+		<label for="genero">Selecciona un género:</label>
+		<select id="genero" name="genero">
+			<option value="" selected>-- Selecciona --</option>
+			<option value="Action">Action</option>
+			<option value="Adventure">Adventure</option>
+			<option value="Animation">Animation</option>
+			<option value="Biography">Biography</option>
+			<option value="Comedy">Comedy</option>
+			<option value="Crime">Crime</option>
+			<option value="Documentary">Documentary</option>
+			<option value="Drama">Drama</option>
+			<option value="Family">Family</option>
+			<option value="Fantasy">Fantasy</option>
+			<option value="Film-noir">Film-Noir</option>
+			<option value="Game-show">Game-Show</option>
+			<option value="History">History</option>
+			<option value="Horror">Horror</option>
+			<option value="Music">Music</option>
+			<option value="Musical">Musical</option>
+			<option value="Mystery">Mystery</option>
+			<option value="News">News</option>
+			<option value="Reality-tv">Reality-TV</option>
+			<option value="Romance">Romance</option>
+			<option value="Sci-fi">Sci-Fi</option>
+			<option value="Short">Short</option>
+			<option value="Sport">Sport</option>
+			<option value="Talk-show">Talk-Show</option>
+			<option value="Thriller">Thriller</option>
+			<option value="War">War</option>
+			<option value="Western">Western</option>
+		</select>
+
+	</div>
+	<div class="flex-container" id="generos"></div>
+	<div class="flex-container peliculas" id="peliculas"></div>
+
+</body>
+<script src="/js/fetch.js"></script>
+
+</html>
