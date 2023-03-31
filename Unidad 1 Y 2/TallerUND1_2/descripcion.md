@@ -1,10 +1,6 @@
-## Taller Unidad 1 y 2
+## Unidad 1 y 2
 
-Aplicación web utilizando JavaScript y Sass. Los estudiantes deberán aplicar los conceptos vistos en la unidad 1 y 2 para crear una aplicación funcional y con estilos. La aplicación debe tener al menos tres páginas y utilizar Fetch para obtener datos.
-
-En el siguiente link, encuentran algunas API's que pueden utilizar en el taller
-
-https://github.com/public-apis/public-apis
+Aplicación web utilizando JavaScript y Sass.Crear una aplicación funcional y con estilos. La aplicación debe tener al menos tres páginas y utilizar Fetch para obtener datos.
 
 ### Las funciones mínimas que debe tener la aplicación web son:
 
@@ -24,7 +20,3 @@ https://github.com/public-apis/public-apis
 
 ```Un diseño atractivo y coherente que utilice Sass para los estilos. Importante que utilicen los conceptos mixins, functions y que quede separado por archivos para utilizar los imports ```
 
-***
-Los estudiantes tendrán hasta el 26 de marzo de 2023 11:59pm para completar el taller.
-
-Para presentar el proyecto es necesario crear una cuenta en github y subir el proyecto a un repositorio agregando al usuario emsanchezc como miembro del proyecto para poder ver el repositorio. 
