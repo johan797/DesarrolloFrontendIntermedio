@@ -25,12 +25,11 @@ function LimpiarPeliculas(params) {
 }
 
 function MostrarGeneros(genero) {
-    fetch(`https://moviesdatabase.p.rapidapi.com/titles?genre=${genero}&list=most_pop_movies&limit=16&page=2`, options)
+    fetch(`https://moviesdatabase.p.rapidapi.com/titles?genre=${genero}&list=most_pop_movies&limit=16`, options)
         .then(response => response.json())
         .then(response => {
             const data = response;
-            data.results.forEach(result => {
-                
+            data.results.forEach(result => {               
 
                 if (result.primaryImage && result.primaryImage.url) {
                     const image = document.createElement("img");
