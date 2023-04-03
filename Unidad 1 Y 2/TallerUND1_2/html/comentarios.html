@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comentarios</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>COMENTARIOS</title>
 </head>
+
 <body>
-    <a href="index.html"><h1>Movies Colombia</h1></a>
-    <h1>comentarios</h1>    
-
-    <form id="comentario-form">
-        <label for="nombre-input">Nombre:</label>
-        <input type="text" id="nombre-input" required>     
-       
-        <label for="comentario-input">Comentario:</label>
-        <textarea id="comentario-input" required></textarea>
-        
-        <button type="submit">Agregar Comentario</button>
-                
-      </form>
-
-    <div id="comentarios"></div>
-   
+    <a href="index.html">
+        <h1>Movies Colombia</h1>
+    </a>
+    <header> 
+        <h1>COMENTARIOS</h1>
+    </header>
+    <main>
+        <form id="comentario-form">
+            <label for="nombre-input">Nombre:</label>
+            <input type="text" id="nombre-input" required>
+            <label for="comentario-input">Comentario:</label>
+            <textarea id="comentario-input" required></textarea>
+            <button type="submit">Agregar Comentario</button>
+        </form>
+        <div id="comentarios"></div>
+    </main>
+    <footer>
+        <p>Derechos reservados Andres Herrera</p>
+    </footer>
 </body>
 <script src="../clases/comentario.js"></script>
 <script src="../js/index.js"></script>
