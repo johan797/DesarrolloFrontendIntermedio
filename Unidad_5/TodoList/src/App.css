@@ -1,0 +1,52 @@
+.container{
+    max-width: 600px;
+    margin: 50px auto;
+    padding:30px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2), 0, 3px 10px rgba(0,0,0,0.23);
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input{
+    width: 100%;
+    padding: 10px ;
+    border: 1px solid ;
+    border-radius: 5px;
+    font-size: 16px;
+
+}
+
+button{
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+     border-radius: 5px;
+     background-color: gray;
+     color: azure;
+    font-size: 16px;
+    cursor: pointer;    
+}
+.btn-eliminar{
+    background-color: orangered;
+}
+
+.tarea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+}
