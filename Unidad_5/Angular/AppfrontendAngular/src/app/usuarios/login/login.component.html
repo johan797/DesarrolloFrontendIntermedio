@@ -1,0 +1,35 @@
+<!--
+<h1>LOGIN</h1>
+<input type="text" id="usuario" name="usuario" placeholder="usuario">
+<input type="password" id ="clave" name="clave" placeholder="clave">
+<button (click)="Login()">Ingresar</button>
+
+<button mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
+  <mat-icon>menu</mat-icon>
+  </button>
+-->
+<mat-card>
+
+    <mat-card-header>
+      <mat-card-title>Iniciar Sesión</mat-card-title>
+    </mat-card-header>
+
+  <mat-card-content>
+
+    <form class="login-form">
+      <mat-form-field class="login-form-field">
+        <mat-label>Usuario</mat-label>
+        <input matInput name="usuario" placeholder="nombre de usuario" >
+      </mat-form-field>
+
+      <mat-form-field class="login-form-field">
+        <mat-label>Contraseña</mat-label>
+        <input matInput type="password" name="password" placeholder="contraseña" >
+      </mat-form-field>
+
+      <button mat-raised-button color="primary">Iniciar Sesión</button>
+    </form>
+
+  </mat-card-content>
+  
+</mat-card>

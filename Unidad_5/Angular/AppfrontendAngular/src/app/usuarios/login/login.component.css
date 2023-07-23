@@ -1,0 +1,11 @@
+mat-card{
+  width: 400px;
+  margin: auto;
+}
+.login-form{
+  display: flex;
+  flex-direction: column;
+}
+.login-form-field{
+  margin-bottom: 16px;
+}

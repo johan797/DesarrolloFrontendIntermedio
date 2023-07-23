@@ -1,0 +1,12 @@
+mat-card{
+  width: 400px;
+  margin: auto;
+}
+.registro-form{
+  display: flex;
+  flex-direction: column;
+}
+.registro-form-field{
+  margin-bottom: 16px;
+}
+

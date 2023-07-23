@@ -1,23 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useContext } from 'react'
 import './App.css'
+import AuthContext from './components/AuthContext'
+import Login from './components/LoginReducer'
+import TablaEstudiantes from './components/TablaEstudiantes'
+import LogoutButton from './components/LogoutButton'
+import DatosUser from './components/DatosUser'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const {user, token} = useContext(AuthContext);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-       
-    </>
+    <div>
+      {
+        token ?
+        (
+          <>
+            <nav>
+              <ul>
+                <li>Identificación: { user.identificacion}</li>
+                <li>Correo: { user.correo}</li>
+                <li>Registrar Estudiante</li>
+                <li>
+                  <LogoutButton />
+                </li>
+              </ul>              
+            </nav>
+            <DatosUser />
+            <TablaEstudiantes />
+          </>          
+        ) : (
+          <Login />
+         )
+      }
+    </div>
   )
 }
 
